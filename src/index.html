@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *, *::after, *::before {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            :root {
+                font-size: 2rem;
+                font-family: sans-serif;
+            }
+
+            .container {
+                display: flex;
+                min-height: 100vh;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            #result {
+                display: block;
+                width: 35vw;
+                height: 60px;
+                padding: 10px;
+                background: white;
+                font-size: 1rem;
+            }
+
+            button {
+                width: 35vw;
+                margin: 20px;
+                background-color: pink;
+                height: 50px;
+                border-radius: 5px;
+                border: none;
+                font-size: 1rem;
+                color: white;
+                cursor: pointer;
+                transition: font-size 0.5s, background-color 1s;
+            }
+
+            button:hover {
+                font-size: 1.1rem;
+                background:darkorchid;
+            }
+
+            #length {
+                font-size: 0.5rem;
+                padding: 4px;
+            }
+
+            #mix {
+                margin-right: 10px;
+            }
+
+            label {
+                font-size: 0.5rem;
+                color: #B4886B;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            /* Firefox */
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <input id="result"  disabled/>
+
+            <div id="settings">
+                <input type="number" placeholder='type pass length' id='length'/>
+                <label ><input type='checkbox' id='mix'/>Mix case</label>
+            </div>
+
+            <button>Generate</button>
+        </div>
+        <script type="module" src="./index.js"></script>
+    </body>
+</html>
